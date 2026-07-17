@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Charba | Full Stack Engineer & Creative Developer</title>
+  <meta name="description" content="Building thoughtful, human-centric web experiences with elegant code and modern aesthetics.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Theme and Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['var(--font-heading)', 'sans-serif'],
+            body: ['var(--font-body)', 'sans-serif'],
+            mono: ['var(--font-mono)', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    
+      --accent-primary: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-light: #e0e7ff;
+    }
+
+    body {
+      font-family: var(--font-body), sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: var(--font-heading), sans-serif;
+    }
+
+    .accent-bg { background-color: var(--accent-primary); }
+    .accent-bg-hover:hover { background-color: var(--accent-hover); }
+    .accent-text { color: var(--accent-primary); }
+    .accent-text-hover:hover { color: var(--accent-hover); }
+    .accent-border { border-color: var(--accent-primary); }
+    .accent-ring:focus { --tw-ring-color: var(--accent-primary); }
+    
+    /* Custom Theme Layouts */
+    
+      .cyber-glow {
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+      }
+      .cyber-glow-hover:hover {
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+      }
+    
+
+    
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-300 min-h-screen text-slate-800 antialiased overflow-x-hidden">
+
+  <!-- Floating Navigation -->
+  <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-xl rounded-full border border-slate-200/50 bg-slate-900/80 border-slate-800 backdrop-blur-md py-3 px-6 shadow-lg transition-all duration-300">
+    <div class="flex items-center justify-between">
+      <a href="#hero" class="font-heading font-semibold text-sm text-white">Ahmad Charba</a>
+      <div class="flex items-center gap-6 text-xs font-medium">
+        <a href="#about" class="hover:text-[var(--accent-primary)] transition-colors text-slate-300">About</a>
+        <a href="#projects" class="hover:text-[var(--accent-primary)] transition-colors text-slate-300">Projects</a>
+        <a href="#experience" class="hover:text-[var(--accent-primary)] transition-colors text-slate-300">Timeline</a>
+        <a href="#contact" class="hover:text-[var(--accent-primary)] transition-colors text-slate-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 ">
+    
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99, 102, 241,0.15),rgba(255,255,255,0))]"></div>
+    
+
+    <div class="max-w-4xl mx-auto w-full text-center relative z-10 flex flex-col items-center">
+      
+        <div class="mb-8 relative group">
+          <div class="absolute inset-0 rounded-full bg-[var(--accent-primary)] opacity-20 blur-xl group-hover:opacity-35 transition-opacity"></div>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400&h=400" alt="Ahmad Charba" class="w-28 h-28 rounded-full object-cover border-2 border-white shadow-md relative z-10">
+        </div>
+      
+      
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 bg-slate-900 text-[var(--accent-primary)] border border-slate-800">
+        Available for Opportunities
+      </span>
+      
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
+        Ahmad Charba
+      </h1>
+      
+      <p class="text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-slate-300">
+        Full Stack Engineer & Creative Developer — Building thoughtful, human-centric web experiences with elegant code and modern aesthetics.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#contact" class="px-6 py-3 rounded-xl font-medium text-sm text-white accent-bg accent-bg-hover transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+          Get in Touch
+        </a>
+        <a href="#projects" class="px-6 py-3 rounded-xl font-medium text-sm border transition-all border-slate-800 text-slate-300 bg-slate-900/50 hover:bg-slate-900">
+          View Projects
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-5 mt-12 text-slate-400">
+        <a href="https://github.com/username" target="_blank" rel="noopener" class="hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener" class="hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        <a href="https://twitter.com/username" target="_blank" rel="noopener" class="hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+        <a href="mailto:alex.rivera@example.com" class="hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 relative border-t border-slate-900 bg-slate-950/40">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12 items-start">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold tracking-tight mb-6 text-white">
+            About Me
+          </h2>
+          <div class="prose max-w-none leading-relaxed text-sm space-y-4 text-slate-300">
+            <p>I am a full stack engineer based in San Francisco, specialized in crafting highly polished interactive web applications. With over 4 years of professional experience, I bridge the gap between rigorous software engineering and fluid design. I'm passionate about accessibility, performance, and building interfaces that feel intuitive and satisfying to use.</p>
+            <p>I thrive in environments that challenge me to think outside the box and solve multi-dimensional problems. Currently open to freelance engagements, full-time contracts, and engineering partnerships.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold tracking-tight mb-4 text-white">
+            Core Toolkit
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                TypeScript
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                React / Next.js
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Tailwind CSS
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Node.js
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Express
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                PostgreSQL
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                GraphQL
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Git & GitHub
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Docker
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Vite
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                Figma
+              </span>
+            
+              <span class="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-800 text-slate-300 bg-slate-900">
+                UI/UX Prototyping
+              </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight mb-2 text-white">
+            Featured Projects
+          </h2>
+          <p class="text-xs text-slate-400">
+            A small selection of client projects, experiments, and open-source contributions.
+          </p>
+        </div>
+        
+        <!-- Filter Controls -->
+        <div id="project-filters" class="flex flex-wrap gap-2 text-xs font-medium">
+          <button data-filter="all" class="px-4 py-2 rounded-full border border-slate-200 transition-all cursor-pointer bg-slate-950 text-white border-transparent" onclick="filterProjects('all', this)">All</button>
+          
+            <button data-filter="React" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('React', this)">React</button>
+          
+            <button data-filter="TypeScript" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('TypeScript', this)">TypeScript</button>
+          
+            <button data-filter="D3.js" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('D3.js', this)">D3.js</button>
+          
+            <button data-filter="Tailwind" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Tailwind', this)">Tailwind</button>
+          
+            <button data-filter="Web Audio API" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Web Audio API', this)">Web Audio API</button>
+          
+            <button data-filter="Tailwind CSS" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Tailwind CSS', this)">Tailwind CSS</button>
+          
+            <button data-filter="Next.js" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Next.js', this)">Next.js</button>
+          
+            <button data-filter="Stripe API" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Stripe API', this)">Stripe API</button>
+          
+            <button data-filter="Vercel" class="px-4 py-2 rounded-full border border-slate-800 text-slate-300 hover:bg-slate-900 transition-all cursor-pointer" onclick="filterProjects('Vercel', this)">Vercel</button>
+          
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300">
+        
+          <div data-tags='["React","TypeScript","D3.js","Tailwind"]' class="group flex flex-col rounded-2xl border overflow-hidden transition-all duration-300 border-slate-900 bg-slate-950 hover:border-slate-800 cyber-glow-hover">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=400" alt="Nova Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                <button onclick="openProjectModal('1')" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md cursor-pointer"><i data-lucide="eye" class="w-4 h-4"></i></button>
+                <a href="https://github.com/username/nova-dashboard" target="_blank" rel="noopener" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md"><i data-lucide="github" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold tracking-tight mb-2 text-white">Nova Dashboard</h3>
+              <p class="text-xs mb-4 flex-1 leading-relaxed text-slate-400">A real-time telemetry and cloud analytics dashboard featuring fluid, GPU-accelerated motion graphics and custom data visualizers.</p>
+              
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">React</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">TypeScript</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">D3.js</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Tailwind</span>
+              </div>
+
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100/10 mt-auto">
+                <button onclick="openProjectModal('1')" class="text-xs font-semibold accent-text hover:underline cursor-pointer">Learn More →</button>
+                <div class="flex gap-3">
+                  <a href="https://github.com/username/nova-dashboard" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                  <a href="https://example.com/nova" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div data-tags='["TypeScript","Web Audio API","Tailwind CSS"]' class="group flex flex-col rounded-2xl border overflow-hidden transition-all duration-300 border-slate-900 bg-slate-950 hover:border-slate-800 cyber-glow-hover">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600&h=400" alt="Aura Audio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                <button onclick="openProjectModal('2')" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md cursor-pointer"><i data-lucide="eye" class="w-4 h-4"></i></button>
+                <a href="https://github.com/username/aura-audio" target="_blank" rel="noopener" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md"><i data-lucide="github" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold tracking-tight mb-2 text-white">Aura Audio</h3>
+              <p class="text-xs mb-4 flex-1 leading-relaxed text-slate-400">An ambient synthesizer and audio focus canvas that converts browser telemetry and mouse movements into calming soundscapes.</p>
+              
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">TypeScript</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Web Audio API</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Tailwind CSS</span>
+              </div>
+
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100/10 mt-auto">
+                <button onclick="openProjectModal('2')" class="text-xs font-semibold accent-text hover:underline cursor-pointer">Learn More →</button>
+                <div class="flex gap-3">
+                  <a href="https://github.com/username/aura-audio" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                  <a href="https://example.com/aura" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div data-tags='["React","Next.js","Stripe API","Vercel"]' class="group flex flex-col rounded-2xl border overflow-hidden transition-all duration-300 border-slate-900 bg-slate-950 hover:border-slate-800 cyber-glow-hover">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400" alt="Solstice Commerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                <button onclick="openProjectModal('3')" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md cursor-pointer"><i data-lucide="eye" class="w-4 h-4"></i></button>
+                <a href="https://github.com/username/solstice" target="_blank" rel="noopener" class="p-2.5 rounded-full bg-white text-slate-900 hover:scale-110 transition-transform shadow-md"><i data-lucide="github" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-lg font-bold tracking-tight mb-2 text-white">Solstice Commerce</h3>
+              <p class="text-xs mb-4 flex-1 leading-relaxed text-slate-400">A headless, high-speed e-commerce gateway with dynamic image optimization, localized currency rendering, and 100ms load times.</p>
+              
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">React</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Next.js</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Stripe API</span><span class="px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300">Vercel</span>
+              </div>
+
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100/10 mt-auto">
+                <button onclick="openProjectModal('3')" class="text-xs font-semibold accent-text hover:underline cursor-pointer">Learn More →</button>
+                <div class="flex gap-3">
+                  <a href="https://github.com/username/solstice" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                  <a href="https://example.com/solstice" target="_blank" rel="noopener" class="text-slate-400 hover:text-[var(--accent-primary)] transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline / Experience Section -->
+  <section id="experience" class="py-24 px-6 border-t border-slate-900 bg-slate-950/40">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold tracking-tight mb-12 text-center text-white">
+        Work & Education
+      </h2>
+
+      <div class="relative border-l border-slate-200/80 ml-4 md:ml-32">
+        
+          <div class="mb-10 pl-6 relative">
+            <!-- Bullet indicator -->
+            <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full border-2 bg-white border-[var(--accent-primary)] accent-bg"></div>
+            
+            <!-- Date Column on Desktop -->
+            <div class="md:absolute md:-left-36 md:top-1 md:w-28 text-xs font-medium text-slate-400 md:text-right">
+              2024 - Present
+            </div>
+
+            <!-- Content Card -->
+            <div class="p-5 rounded-xl border border-slate-900 bg-slate-950/60">
+              <div class="flex items-center gap-2 mb-1.5">
+                <i data-lucide="briefcase" class="w-4 h-4 accent-text"></i>
+                <h3 class="text-sm font-bold text-white">Senior Software Engineer</h3>
+              </div>
+              <p class="text-xs font-medium mb-3 text-slate-500">Prism Tech &bull; San Francisco, CA</p>
+              <p class="text-xs leading-relaxed text-slate-400">Lead development of cloud orchestration interfaces. Built custom design system components, improved load performance by 35%, and mentored junior engineers.</p>
+            </div>
+          </div>
+        
+          <div class="mb-10 pl-6 relative">
+            <!-- Bullet indicator -->
+            <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full border-2 bg-white border-[var(--accent-primary)] accent-bg"></div>
+            
+            <!-- Date Column on Desktop -->
+            <div class="md:absolute md:-left-36 md:top-1 md:w-28 text-xs font-medium text-slate-400 md:text-right">
+              2022 - 2024
+            </div>
+
+            <!-- Content Card -->
+            <div class="p-5 rounded-xl border border-slate-900 bg-slate-950/60">
+              <div class="flex items-center gap-2 mb-1.5">
+                <i data-lucide="briefcase" class="w-4 h-4 accent-text"></i>
+                <h3 class="text-sm font-bold text-white">Frontend Developer</h3>
+              </div>
+              <p class="text-xs font-medium mb-3 text-slate-500">Vortex Labs &bull; Remote</p>
+              <p class="text-xs leading-relaxed text-slate-400">Developed user-facing features for a high-traffic collaborative design editor. Implemented robust drag-and-drop mechanics and custom rendering layers.</p>
+            </div>
+          </div>
+        
+          <div class="mb-10 pl-6 relative">
+            <!-- Bullet indicator -->
+            <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full border-2 bg-white border-[var(--accent-primary)] accent-bg"></div>
+            
+            <!-- Date Column on Desktop -->
+            <div class="md:absolute md:-left-36 md:top-1 md:w-28 text-xs font-medium text-slate-400 md:text-right">
+              2018 - 2022
+            </div>
+
+            <!-- Content Card -->
+            <div class="p-5 rounded-xl border border-slate-900 bg-slate-950/60">
+              <div class="flex items-center gap-2 mb-1.5">
+                <i data-lucide="graduation-cap" class="w-4 h-4 accent-text"></i>
+                <h3 class="text-sm font-bold text-white">B.S. in Computer Science</h3>
+              </div>
+              <p class="text-xs font-medium mb-3 text-slate-500">University of California &bull; Berkeley, CA</p>
+              <p class="text-xs leading-relaxed text-slate-400">Focused on human-computer interaction, software engineering, and graphic design foundations.</p>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 relative">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold tracking-tight mb-4 text-white">
+        Let's Create Something Great
+      </h2>
+      <p class="text-sm mb-10 text-slate-300">
+        Have a project idea, question, or just want to connect? Send a note directly and I'll get back to you shortly.
+      </p>
+
+      <form id="contact-form" onsubmit="submitForm(event)" class="text-left space-y-4">
+        <div>
+          <label class="block text-xs font-medium mb-1.5 text-slate-500">Your Name</label>
+          <input type="text" required class="w-full px-4 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 transition-all bg-slate-900 border-slate-800 text-white focus:ring-[var(--accent-primary)]/40 focus:border-[var(--accent-primary)]">
+        </div>
+        
+        <div>
+          <label class="block text-xs font-medium mb-1.5 text-slate-500">Email Address</label>
+          <input type="email" required class="w-full px-4 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 transition-all bg-slate-900 border-slate-800 text-white focus:ring-[var(--accent-primary)]/40 focus:border-[var(--accent-primary)]">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium mb-1.5 text-slate-500">Message</label>
+          <textarea rows="4" required class="w-full px-4 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 transition-all bg-slate-900 border-slate-800 text-white focus:ring-[var(--accent-primary)]/40 focus:border-[var(--accent-primary)]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-lg text-sm font-semibold text-white accent-bg accent-bg-hover shadow transition-all hover:shadow-md cursor-pointer flex justify-center items-center gap-2">
+          Send Message <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+      
+      <!-- Submission Banner -->
+      <div id="form-success" class="hidden p-5 rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-emerald-400 text-sm mt-4 text-center">
+        <i data-lucide="circle-check" class="w-5 h-5 mx-auto mb-2 text-emerald-400"></i>
+        Thank you! Your message has been sent successfully.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t text-center border-slate-900 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-xs mb-4 text-slate-400">
+        &copy; 2026 Ahmad Charba. All rights reserved.
+      </p>
+      <p class="text-[10px] text-slate-300">
+        Designed & compiled via GitHub Pages Portfolio Builder.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl relative border border-slate-800 bg-slate-950 text-white">
+      <!-- Close button -->
+      <button onclick="closeProjectModal()" class="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-500/10 transition-colors cursor-pointer text-slate-400 hover:text-slate-200">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <img id="modal-image" src="" alt="" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 id="modal-title" class="text-xl font-bold mb-2"></h3>
+        <p id="modal-description" class="text-xs leading-relaxed mb-6 text-slate-400"></p>
+        
+        <div class="flex flex-wrap gap-1.5 mb-6" id="modal-tags"></div>
+
+        <div class="flex gap-4">
+          <a id="modal-live-link" href="" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg text-xs font-semibold text-white accent-bg accent-bg-hover flex items-center gap-1.5">
+            Visit Live Project <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+          <a id="modal-github-link" href="" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg text-xs font-semibold border border-slate-200/20 hover:bg-slate-500/10 flex items-center gap-1.5">
+            GitHub Code <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Project Data Store
+    const projects = [{"id":"1","title":"Nova Dashboard","description":"A real-time telemetry and cloud analytics dashboard featuring fluid, GPU-accelerated motion graphics and custom data visualizers.","longDescription":"Nova is a high-performance workspace dashboard optimized for cloud metrics. Built using React and D3, it handles thousands of real-time events per second. It includes customizable widget configurations, keyboard shortcut navigation, and deep dark-mode integrations.","tags":["React","TypeScript","D3.js","Tailwind"],"githubUrl":"https://github.com/username/nova-dashboard","liveUrl":"https://example.com/nova","imageUrl":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=400","featured":true},{"id":"2","title":"Aura Audio","description":"An ambient synthesizer and audio focus canvas that converts browser telemetry and mouse movements into calming soundscapes.","longDescription":"Aura is an interactive, browser-based digital audio workstation (DAW) for focus. Using Web Audio API, it synthesizes smooth frequencies mapped to user interaction vectors, aiding deep flow states with beautiful SVG ripple animations.","tags":["TypeScript","Web Audio API","Tailwind CSS"],"githubUrl":"https://github.com/username/aura-audio","liveUrl":"https://example.com/aura","imageUrl":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600&h=400","featured":true},{"id":"3","title":"Solstice Commerce","description":"A headless, high-speed e-commerce gateway with dynamic image optimization, localized currency rendering, and 100ms load times.","longDescription":"Solstice is a Next-generation shop client boasting ultra-low latency. It integrates with Stripe, provides client-side cart synchronization with local storage persistence, and leverages responsive layout patterns.","tags":["React","Next.js","Stripe API","Vercel"],"githubUrl":"https://github.com/username/solstice","liveUrl":"https://example.com/solstice","imageUrl":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400","featured":false}];
+
+    // Filter projects client-side
+    function filterProjects(tag, button) {
+      // Toggle button states
+      const filterGroup = document.getElementById('project-filters');
+      const buttons = filterGroup.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.className = btn.className.replace(/bg-slate-950|text-white|border-transparent/g, '');
+        btn.className += ' border-slate-800 text-slate-300';
+      });
+      
+      // Select the clicked one
+      button.className = 'px-4 py-2 rounded-full border border-slate-200 transition-all cursor-pointer bg-slate-950 text-white border-transparent';
+
+      const grid = document.getElementById('projects-grid');
+      const cards = grid.querySelectorAll('[data-tags]');
+      
+      cards.forEach(card => {
+        const cardTags = JSON.parse(card.getAttribute('data-tags'));
+        if (tag === 'all' || cardTags.includes(tag)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Handlers
+    function openProjectModal(projectId) {
+      const project = projects.find(p => p.id === projectId);
+      if (!project) return;
+
+      document.getElementById('modal-image').src = project.imageUrl || 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=600';
+      document.getElementById('modal-title').textContent = project.title;
+      document.getElementById('modal-description').textContent = project.longDescription || project.description;
+      
+      const tagsContainer = document.getElementById('modal-tags');
+      tagsContainer.innerHTML = '';
+      project.tags.forEach(tag => {
+        const tagSpan = document.createElement('span');
+        tagSpan.className = "px-2 py-0.5 rounded text-[10px] bg-slate-900 text-slate-300";
+        tagSpan.textContent = tag;
+        tagsContainer.appendChild(tagSpan);
+      });
+
+      const liveBtn = document.getElementById('modal-live-link');
+      if (project.liveUrl) {
+        liveBtn.href = project.liveUrl;
+        liveBtn.style.display = 'inline-flex';
+      } else {
+        liveBtn.style.display = 'none';
+      }
+
+      const gitBtn = document.getElementById('modal-github-link');
+      if (project.githubUrl) {
+        gitBtn.href = project.githubUrl;
+        gitBtn.style.display = 'inline-flex';
+      } else {
+        gitBtn.style.display = 'none';
+      }
+
+      const modal = document.getElementById('project-modal');
+      modal.style.display = 'flex';
+      
+      // Refresh icons for modal
+      lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      document.getElementById('project-modal').style.display = 'none';
+    }
+
+    // Close on click outside modal content
+    window.onclick = function(event) {
+      const modal = document.getElementById('project-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Contact Form Action
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
